@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Times New Roman, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #f4f4f4;
+}
+
+.services, .booking, .contact {
+    padding: 2rem 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+.services .service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.about p {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+h2, h3 {
+    text-align: center; /* Memusatkan teks */
+    color: #333;       /* Warna teks */
+    margin: 0 auto;    /* Margin otomatis untuk tampilan rapi */
+}
+
+.about, .vision {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.vision ul {
+    list-style: disc;
+    margin-left: 2rem;
+    line-height: 1.6;
+}
+.hero img {
+    max-width: 50%;  /* Logo akan menyesuaikan setengah lebar layar */
+    height: auto;    /* Mempertahankan rasio gambar */
+    margin: 0 auto;  /* Memusatkan logo secara horizontal */
+}
+
+/* Responsif untuk perangkat besar (laptop atau desktop) */
+@media (min-width: 1024px) {
+    .hero img {
+        max-width: 30%; /* Kurangi ukuran logo pada layar besar */
+    }
+}
+
+/* Responsif untuk perangkat kecil (smartphone) */
+@media (max-width: 768px) {
+    .hero img {
+        max-width: 70%; /* Perbesar logo pada layar kecil */
+    }
+}
+
+}
+
+.booking form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Menyesuaikan tinggi viewport */
+    display: flex;
+    flex-direction: column; /* Menata elemen secara vertikal */
+    justify-content: center; /* Menempatkan konten di tengah secara vertikal */
+    align-items: center; /* Menempatkan konten di tengah secara horizontal */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari layar */
+}
+
+.moving-background {
+    position: absolute;
+    top: 50%; /* Memusatkan secara vertikal */
+    left: 0;
+    width: 200%; /* Membuat gambar lebih lebar untuk memberikan ruang bergerak */
+    height: 50%; /* Membatasi tinggi gambar */
+    background: url('un2.png') repeat-x; /* Gambar yang diulang secara horizontal */
+    opacity: 0.3; /* Membuat latar lebih redup */
+    transform: translateY(-25%); /* Menyesuaikan posisi agar berada di tengah logo */
+    animation: moveLeftToRight 10s linear infinite; /* Animasi untuk bergerak dari kanan ke kiri */
+    z-index: 3; /* Menempatkan latar di bawah overlay */
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -50%; /* Geser gambar ke kiri agar seolah-olah bergerak ke kanan */
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Lapisan transparan hitam */
+    z-index: 5; /* Menempatkan overlay di atas background */
+}
+
+.company-logo {
+    position: relative;
+    z-index: 10; /* Menempatkan logo di atas background dan overlay */
+    text-align: center; /* Memusatkan logo secara horizontal */
+}
+.pricelist {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.price-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.price-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+.pemesanan {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b359;
+}
+/* Section Umum */
+section {
+    padding: 3rem 1rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Gaya untuk Tentang Kami */
+.about-container {
+    background: linear-gradient(45deg, #e3f2fd, #ffffff);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Gaya untuk Visi dan Misi */
+.vision-container {
+    background: #f4f4f4;
+    padding: 2rem;
+}
+
+.vision-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-content ul li {
+    position: relative;
+    margin: 0.5rem 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.vision-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #25D366;
+}
+
+/* Gaya untuk Daftar Harga */
+.pricelist-container {
+    background: #eaf9ea;
+    padding: 2rem;
+    text-align: center; /* Memusatkan teks dan elemen dalam container */
+}
+
+.pricelist-container p {
+    margin-bottom: 1.5rem; /* Memberikan jarak antara paragraf dan link */
+    font-size: 1rem; /* Ukuran font yang nyaman dibaca */
+    color: #333; /* Warna teks yang kontras */
+}
+
+.price-link {
+    display: inline-block; /* Membuat link terlihat seperti tombol terpisah */
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.price-link:hover {
+    background: #007bff;
+    color: white;
+}
+
+}
+
+/* Gaya untuk Pesan Sekarang */
+.pemesanan-container {
+    background: #fff3cd;
+    padding: 2rem;
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: #20b359;
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #555;
+    margin: 1rem 0;
+}
+..contact {
+    position: fixed;
+    left: 20px; /* Jarak dari sisi kiri halaman */
+    bottom: 20px; /* Jarak dari sisi bawah halaman */
+    color: #333; /* Warna teks yang kontras dengan latar belakang halaman */
+    font-size: 14px; /* Ukuran font */
+    z-index: 9999; /* Agar tetap berada di atas elemen lainnya */
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Efek hover pada tautan */
+}
+
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Efek saat di-hover */
+}
+
+
+
+
